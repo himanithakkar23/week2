@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interactive Photo Gallery</title>
+  
+  <script src = "jquery.js"></script>
+  <style>
+  
+  .gallery
+  {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item 
+{
+  width: 200px; /* Adjust as needed */
+  margin: 10px;
+}
+
+.gallery-item img 
+{
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+</style>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.gallery-item img');
+  
+  images.forEach(image => {
+    image.addEventListener('click', function() {
+      // Add your desired behavior here, like opening the image in a modal or enlarging it.
+      console.log('Image clicked:', image.src);
+    });
+  });
+});
+</script>
+</head>
+<body>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="h/image.jpg" alt="image" >
+    </div>
+    <div class="gallery-item">
+      <img src="h/travelling.jpg" alt="travelling">
+    </div>
+    <!-- Add more gallery items as needed -->
+  </div>
+</body>
+</html>
